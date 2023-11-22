@@ -1,0 +1,53 @@
+MP5 worksheet
+
+Comments:
+
+
+***************** Container Class    *****************
+
+
+ output as specified in the  homework.
+____________________________________
+CircularContainer{height=10.0, radius=2.0}
+surface area: 150.79644737231007
+volume: 125.66370614359172
+---------------------------------
+RectangularContainer{height=10.0, width=2.0, length=3.0}
+surface area: 112.0
+volume: 60.0
+---------------------------------
+TriangularContainer{height=10.0, sideA=4.0, sideB=3.0, sideC=5.0}
+surface area: 132.0
+volume: 60.0
+---------------------------------
+RegularPolygonContainer{height=10.0, side=1.0, numbSides=4}
+surface area: 42.0
+volume: 10.000000000000002
+---------------------------------
+CircularContainer{height=5.0, radius=2.0}
+surface area: 87.96459430051421
+volume: 62.83185307179586
+---------------------------------
+RectangularContainer{height=5.0, width=2.0, length=3.0}
+surface area: 62.0
+volume: 30.0
+---------------------------------
+TriangularContainer{height=5.0, sideA=4.0, sideB=3.0, sideC=5.0}
+surface area: 72.0
+volume: 30.0
+---------------------------------
+RegularPolygonContainer{height=5.0, side=1.0, numbSides=4}
+surface area: 22.0
+volume: 5.000000000000001
+---------------------------------
+total surface area: 680.7610416728243
+total volume: 383.4955592153876
+
+
+
+***************** Bank Account    *****************
+
+
+output as specified in the homework.
+____________________________________
+
