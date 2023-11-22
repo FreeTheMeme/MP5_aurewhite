@@ -1,40 +1,28 @@
 package container;
-
 public class TriangularContainer extends Container{
-    public double height;
-    public double sideA;
-    public double sideB;
-    public double sideC;
+    //vars
+    private double height;
+    private double sideA;
+    private double sideB;
+    private double sideC;
+    //abstract methods
 
-
-
-    public void setHeight(double height) {
-        this.height = height;
-    }
-
-    public void setSideA(double sideA) {
-        this.sideA = sideA;
-    }
-
-    public void setSideB(double sideB) {
-        this.sideB = sideB;
-    }
-
-    public void setSideC(double sideC) {
-        this.sideC = sideC;
+    @Override
+    public double calcTopPerimeter() {
+        double perimeter;
+        perimeter = sideA + sideB + sideC;
+        return perimeter;
     }
 
     @Override
     public double calcTopArea() {
-       double s = (sideA + sideB + sideC)/2.0;
-        return Math.sqrt(s*(s-sideA)*(s-sideB)*(s-sideC));
+        double area;
+        double s;
+        s = (sideA + sideB + sideC)/2.0;
+        area = Math.sqrt(s*(s-sideA)*(s-sideB)*(s-sideC));
+        return area;
     }
-
-    @Override
-    public double calcTopPerimeter() {
-        return sideA + sideB + sideC;
-    }
-
+    //tostr
 
     @Override
     public String toString() {
@@ -43,14 +31,16 @@ public class TriangularContainer extends Container{
                 ", sideA=" + sideA +
                 ", sideB=" + sideB +
                 ", sideC=" + sideC +
-                '}';
+                "} ";
     }
+
+    //constructor
 
     public TriangularContainer(double height, double sideA, double sideB, double sideC) {
         super(height);
-        setHeight(height);
-        setSideA(sideA);
-        setSideB(sideB);
-        setSideC(sideC);
+        this.height = height;
+        this.sideA = sideA;
+        this.sideB = sideB;
+        this.sideC = sideC;
     }
 }

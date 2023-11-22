@@ -1,25 +1,25 @@
 package container;
 
 public abstract class Container {
+    //abstract vars and methods
     private double height;
 
-    public void setHeight(double height) {
+    public Container(double height) {
         this.height = height;
     }
 
-    public abstract double calcTopArea();
+
     public abstract double calcTopPerimeter();
-    public  double calcVolume(){
+    public abstract double calcTopArea();
+    //Concrete Methods
+    public double calcVolume(){
         double volume;
         volume = height * calcTopArea();
         return volume;
     }
-
     public double calcSurfaceArea(){
-    return 0;
-    }
-
-    public Container(double height) {
-        setHeight(height);
+        double surface;
+        surface = 2 * calcTopArea() + height * calcTopPerimeter();
+        return surface;
     }
 }

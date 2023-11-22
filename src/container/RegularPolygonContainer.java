@@ -1,46 +1,41 @@
 package container;
-
 public class RegularPolygonContainer extends Container{
-    public double height;
-    public double side;
-    public double numSides;
+    //vars
+    private double height;
+    private double side;
+    private int numbSides;
+    //abs methods
 
-
-    public void setHeight(double height) {
-        this.height = height;
-    }
-
-    public void setSide(double side) {
-        this.side = side;
-    }
-
-    public void setNumSides(double numSides) {
-        this.numSides = numSides;
+    @Override
+    public double calcTopPerimeter() {
+        double perimeter;
+        perimeter = numbSides * side;
+        return perimeter;
     }
 
     @Override
     public double calcTopArea() {
-        return numSides * side * side / ( 4*Math.tan(Math.PI/numSides));
+        double area;
+        area = numbSides * side * side / ( 4*Math.tan(Math.PI/numbSides));
+        return area;
     }
+    //tostr
 
-    @Override
-    public double calcTopPerimeter() {
-        return numSides * side;
-    }
-
-
-    public RegularPolygonContainer(double height,double side, double numSides) {
-        super(height);
-        setHeight(height);
-        setSide(side);
-        setNumSides(numSides);
-    }
 
     @Override
     public String toString() {
         return "RegularPolygonContainer{" +
                 "height=" + height +
-                ", numSides=" + numSides +
-                '}';
+                ", side=" + side +
+                ", numbSides=" + numbSides +
+                "} ";
+    }
+    //default constructor
+
+    public RegularPolygonContainer(double height, double side, int numbSides) {
+        super(height);
+        this.height = height;
+        this.side = side;
+        this.numbSides = numbSides;
     }
 }

@@ -1,43 +1,23 @@
 package container;
-
-public class RectangularContainer extends Container {
+public class RectangularContainer extends Container{
     private double height;
     private double width;
     private double length;
+    //abs methods
 
-    public void setHeight(double height) {
-        this.height = height;
-    }
-    public void setWidth(double width) {
-        this.width = width;
-    }
-    public void setLength(double length) {
-        this.length = length;
-    }
-
-    public double getHeight() {
-        return height;
-    }
-
-    public double getWidth() {
-        return width;
-    }
-
-    public double getLength() {
-        return length;
+    @Override
+    public double calcTopPerimeter() {
+        double perimeter;
+        perimeter = 2*(width+length);
+        return perimeter;
     }
 
     @Override
     public double calcTopArea() {
-        return width * length;
+        double area;
+        area = width * length;
+        return area;
     }
-
-    @Override
-    public double calcTopPerimeter() {
-        return 2 * (width + length);
-    }
-
-
 
     @Override
     public String toString() {
@@ -45,13 +25,13 @@ public class RectangularContainer extends Container {
                 "height=" + height +
                 ", width=" + width +
                 ", length=" + length +
-                '}';
+                "} " ;
     }
 
     public RectangularContainer(double height, double width, double length) {
         super(height);
-        setHeight(height);
-        setWidth(width);
-        setLength(length);
+        this.height = height;
+        this.width = width;
+        this.length = length;
     }
 }

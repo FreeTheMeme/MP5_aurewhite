@@ -1,25 +1,23 @@
 package container;
 
-public class CircularContainer extends Container {
+public class CircularContainer extends Container{
+    //vars
     private double height;
     private double radius;
-    @Override
-    public void setHeight(double height) {
-        this.height = height;
-    }
+    //abstract methods
 
-    public void setRadius(double radius) {
-        this.radius = radius;
+    @Override
+    public double calcTopPerimeter() {
+        double perimeter;
+        perimeter = 2 * Math.PI * radius;
+        return perimeter;
     }
 
     @Override
     public double calcTopArea() {
-        return Math.PI * radius * radius;
-    }
-
-    @Override
-    public double calcTopPerimeter() {
-        return 2 * Math.PI * radius;
+        double area;
+        area = Math.PI*radius*radius;
+        return area;
     }
 
     @Override
@@ -27,12 +25,12 @@ public class CircularContainer extends Container {
         return "CircularContainer{" +
                 "height=" + height +
                 ", radius=" + radius +
-                '}';
-    }
-    public CircularContainer(double height, double radius) {
-        super(height);
-        setHeight(height);
-        setRadius(radius);
+                "} ";
     }
 
+    public CircularContainer(double height, double radius) {
+        super(height);
+        this.height = height;
+        this.radius = radius;
+    }
 }
