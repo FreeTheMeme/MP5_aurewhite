@@ -1,7 +1,7 @@
 MP5 worksheet
 
 Comments:
-
+balance not changing
 
 ***************** Container Class    *****************
 
@@ -50,4 +50,23 @@ total volume: 383.4955592153876
 
 output as specified in the homework.
 ____________________________________
-
+SavingAccount{accountNumber='00001', balance=5000.0, annualInterestRate=0.02, minDeposit=50.0, monthlyFee=10.0}
+--Attempting to deposit $30--
+Amount has to more that50.0$
+--Attempting to deposit $200--
+depositing: 200.0 into SavingAccount 00001balance: 5200.0
+--Attempting to withdraw $5300--
+withdrawing: 5300.0 into SavingAccount 00001balance: 5200.0
+--Attempting to withdraw $500--
+withdrawing: 500.0 into SavingAccount 00001balance: 5200.0
+SavingAccount{accountNumber='00001', balance=5200.0, annualInterestRate=0.02, minDeposit=50.0, monthlyFee=10.0}
+SavingAccount{accountNumber='00002', balance=500.0, annualInterestRate=0.02, minDeposit=50.0, monthlyFee=10.0}
+CheckingAccount{accountNumber='00003', balance=500.0, overdraftLimit=50.0}
+--Attempting to withdraw $540--
+withdrawing: 540.0 into CheckingAccount 00003balance: 500.0
+CheckingAccount{accountNumber='00003', balance=500.0, overdraftLimit=50.0}
+--Attempting to deposit $50--
+depositing: 50.0 into CheckingAccount 00003balance: 500.0
+--Attempting to withdraw $70--
+withdrawing: 70.0 into CheckingAccount 00003balance: 500.0
+CheckingAccount{accountNumber='00003', balance=500.0, overdraftLimit=50.0}
