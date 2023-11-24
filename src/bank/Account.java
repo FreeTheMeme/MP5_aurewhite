@@ -18,28 +18,24 @@ public abstract class Account {
         this.balance = balance;
     }
 
-    public LocalDate getDateCreated() {
-        return dateCreated;
+    public void now(){
+        LocalDate currentDate = LocalDate.now();
+        dateCreated = currentDate;
     }
+    //abs
+    public abstract void withdraw(double withdrawAmount);
+    public abstract void deposit(double depositAmount);
 
-    public void setDateCreated(LocalDate dateCreated) {
-        this.dateCreated = dateCreated;
-    }
     //tostr
     @Override
     public String toString() {
         return "Account{" +
-                "accountNumber='" + accountNumber + '\'' +
-                ", balance=" + balance +
-                ", dateCreated=" + dateCreated +
-                '}';
+                ", dateCreated=" + dateCreated;
     }
     //constructor
     public Account(String accountNumber, double balance) {
         this.accountNumber = accountNumber;
         this.balance = balance;
+        now();
     }
-    //abs
-    public abstract void withdraw(double withdrawAmount);
-    public abstract void deposit(double depositAmount);
 }
