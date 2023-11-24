@@ -27,3 +27,14 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+/MP5_aurewhite.zip
+/container/RectangularContainer.java
+/bank/Account.java
+/bank/AccountDemo.java
+/bank/CheckingAccount.java
+/container/CircularContainer.java
+/container/Container.java
+/container/ContainerDemo.java
+/container/RegularPolygonContainer.java
+/bank/SavingAccount.java
+/container/TriangularContainer.java
