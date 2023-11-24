@@ -27,8 +27,8 @@ package bank;
         if(newBalance<=0){
             System.out.println("cannot overdraft");
         }else {
-            System.out.println("withdrawing: " + withdrawAmount + " into SavingAccount " + accountNumber + " balance: " + balance);
             setBalance(newBalance);
+            System.out.println("withdrawing: " + withdrawAmount + " into SavingAccount " + accountNumber + " balance: " + balance);
         }
     }
 
@@ -37,12 +37,12 @@ package bank;
         double newBalance;
         double newBalanceInterest;
         if(depositAmount<minDeposit){
-            System.out.println("Amount has to more that"+minDeposit+"$");
+            System.out.println("Amount has to more than "+minDeposit+"$");
         }else {
         newBalance = (balance + depositAmount);
         newBalanceInterest = newBalance + (newBalance*annualInterestRate);
         setBalance(newBalanceInterest);
-            System.out.println("depositing: "+depositAmount+" into SavingAccount "+accountNumber+"balance: "+balance);
+            System.out.println("depositing: "+depositAmount+" into SavingAccount "+accountNumber+" balance: "+balance);
         }
     }
 
