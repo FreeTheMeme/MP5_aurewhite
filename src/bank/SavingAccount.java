@@ -9,11 +9,6 @@ package bank;
     private double monthlyFee = 10;
 
         @Override
-        public double getBalance() {
-            return balance;
-        }
-
-        @Override
         public void setBalance(double balance) {
             this.balance = balance;
         }
@@ -46,6 +41,9 @@ package bank;
         }
     }
 
+        //toSTR
+
+
         @Override
         public String toString() {
             return "SavingAccount{" +
@@ -54,7 +52,7 @@ package bank;
                     ", annualInterestRate=" + annualInterestRate +
                     ", minDeposit=" + minDeposit +
                     ", monthlyFee=" + monthlyFee +
-                    "} ";
+                    "} " + super.toString();
         }
 
         public SavingAccount(String accountNumber, double balance, double minDeposit) {
