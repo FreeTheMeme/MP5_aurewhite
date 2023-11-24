@@ -46,12 +46,12 @@ package bank;
 
         @Override
         public String toString() {
-            return "SavingAccount{" +
-                    "\naccountNumber='" + accountNumber + '\'' +
-                    "\nbalance=" + balance +
-                    "\nannualInterestRate=" + annualInterestRate +
-                    "\nminDeposit=" + minDeposit +
-                    "\nmonthlyFee=" + monthlyFee +
+            return  "\nSaving Account" +
+                    "\n account No='" + accountNumber + '\'' +
+                    "\n balance=" + balance +
+                    "\n annualInterestRate=" + annualInterestRate +
+                    "\n minDeposit=" + minDeposit +
+                    "\n monthlyFee=" + monthlyFee +
                     "\n" + super.toString();
         }
 

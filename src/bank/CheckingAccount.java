@@ -6,7 +6,13 @@ public class CheckingAccount extends Account {
     private double balance;
     private double overdraftLimit;
 
-    //abs
+    @Override
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+
+    //abs methods
 
     @Override
     public void withdraw(double withdrawAmount) {
@@ -16,7 +22,7 @@ public class CheckingAccount extends Account {
             System.out.println("overdraftLimit reached");
         }else {
             setBalance(newBalance);
-            System.out.println("withdrawing: "+withdrawAmount+" into CheckingAccount "+accountNumber+"balance: "+balance);
+            System.out.println("withdrawing: "+withdrawAmount+" into CheckingAccount "+accountNumber+" balance: "+balance);
         }
     }
 
@@ -25,17 +31,18 @@ public class CheckingAccount extends Account {
         double newBalance;
         newBalance = balance + depositAmount;
         setBalance(newBalance);
-        System.out.println("depositing: "+depositAmount+" into CheckingAccount "+accountNumber+"balance: "+balance);
+        System.out.println("depositing: "+depositAmount+" into CheckingAccount "+accountNumber+" balance: "+balance);
     }
     //tostr
 
     @Override
     public String toString() {
-        return "CheckingAccount{" +
-                "accountNumber='" + accountNumber + '\'' +
-                ", balance=" + balance +
-                ", overdraftLimit=" + overdraftLimit +
-                "} ";
+        return "\nChecking Account" +
+                "\n account No='" + accountNumber + '\'' +
+                "\n balance=" + balance +
+                "\n overdraftLimit=" + overdraftLimit +
+                "\n" + super.toString() +
+                "\n";
     }
 
 

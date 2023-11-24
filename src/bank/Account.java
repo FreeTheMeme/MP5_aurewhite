@@ -29,8 +29,7 @@ public abstract class Account {
     //tostr
     @Override
     public String toString() {
-        return "Account{" +
-                ", dateCreated=" + dateCreated;
+        return " dateCreated=" + dateCreated;
     }
     //constructor
     public Account(String accountNumber, double balance) {
