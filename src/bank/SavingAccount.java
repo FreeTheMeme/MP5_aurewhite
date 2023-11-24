@@ -24,7 +24,12 @@ package bank;
     public void withdraw(double withdrawAmount) {
         double newBalance;
         newBalance = balance - withdrawAmount;
-        System.out.println("withdrawing: "+withdrawAmount+" into SavingAccount "+accountNumber+"balance: "+balance);
+        if(newBalance<=0){
+            System.out.println("cannot overdraft");
+        }else {
+            System.out.println("withdrawing: " + withdrawAmount + " into SavingAccount " + accountNumber + " balance: " + balance);
+            setBalance(newBalance);
+        }
     }
 
     @Override
@@ -36,7 +41,7 @@ package bank;
         }else {
         newBalance = (balance + depositAmount);
         newBalanceInterest = newBalance + (newBalance*annualInterestRate);
-        setBalance(newBalance);
+        setBalance(newBalanceInterest);
             System.out.println("depositing: "+depositAmount+" into SavingAccount "+accountNumber+"balance: "+balance);
         }
     }
